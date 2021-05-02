@@ -21,7 +21,6 @@ Sample Record :
 {"artist": null, "auth": "Logged In", "firstName": "Walter", "gender": "M", "itemInSession": 0, "lastName": "Frye", "length": null, "level": "free", "location": "San Francisco-Oakland-Hayward, CA", "method": "GET","page": "Home", "registration": 1540919166796.0, "sessionId": 38, "song": null, "status": 200, "ts": 1541105830796, "userAgent": "\"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/36.0.1985.143 Safari\/537.36\"", "userId": "39"}
 ```
 
-
 ## Schema
 
 #### Fact Table 
@@ -49,6 +48,16 @@ artist_id, name, location, latitude, longitude
 start_time, hour, day, week, month, year, weekday
 ```
 
+### Entity Relationship Diagram
+<p align="center">
+  <img src="https://github.com/chaitanyakasaraneni/DataModelingWithPostgres/blob/main/images/sparkifydb_erd.png">
+</p>
+<p align="center">ER Diagram of sparkifydb</p>
+
+
+***NOTE:*** This diagram is generated using `sqlalchemy_schemadisplay` library. You can install the library using `pip install sqlalchemy_schemadisplay`.
+
+
 ## Project Files
 
 ```sql_queries.py``` -> contains sql queries for dropping and  creating fact and dimension tables. Also, contains insertion query template.
@@ -60,6 +69,8 @@ start_time, hour, day, week, month, year, weekday
 ```etl.py``` -> read and process **song_data** and **log_data**
 
 ```test.ipynb``` -> a notebook to connect to postgres db and validate the data loaded.
+
+```ERD.py``` -> python code to generate ER Diagram.
 
 ## Environment 
 Python 3.6 or above
